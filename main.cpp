@@ -23,7 +23,7 @@ int main()
 
     for (size_t i = 0;i<Figs.size();i++){
 
-        Figs[i]->draw(*s1);
+        Figs[i]->draw(*s1); //chama o metodo draw de cada figura
     }
 
     s1->writeOFF((char*)"saida.off");
