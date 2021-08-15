@@ -140,6 +140,21 @@ void Sculptor::writeOFF(const char *filename)
 
        arq.close();
     }
- }
+}
+
+int Sculptor::getX()
+{
+    return nx;
+}
+
+int Sculptor::getY()
+{
+    return ny;
+}
+
+int Sculptor::getZ()
+{
+    return nz;
+}
 
 
