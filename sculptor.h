@@ -4,7 +4,7 @@
 struct Voxel {
     float r,g,b;
     float a;
-    bool isOn;
+    bool isOn = false;
   };
 
 class Sculptor {
@@ -19,6 +19,10 @@ public:
   void putVoxel(int x, int y, int z);
   void cutVoxel(int x, int y, int z);
   void writeOFF(const char* filename);
+  int getX();
+  int getY();
+  int getZ();
+
 
 };
 
