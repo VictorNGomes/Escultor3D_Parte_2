@@ -7,6 +7,7 @@
 #include<iostream>
 #include<putvoxel.h>
 #include<cutvoxel.h>
+#include<putbox.h>
 Interpretador::Interpretador(){
 
 
@@ -54,7 +55,12 @@ std::vector<FiguraGeometrica*> Interpretador::Parse(std::string arq)
                         ss >> x0 >> y0 >> z0;
                         Figuras.push_back(new CutVoxel(x0,y0,z0));
                         std::cout<<"voxel cortado"<< std::endl;
-
+                      }
+                    else if(token.compare("putbox")==0){
+                        int x0,y0,z0,x1,y1,z1;
+                        float r, g, b, a;
+                        ss >> x0 >> x1 >> y0 >> y1 >> z0 >> z1 >> r >> g >> b >> a;
+                        Figuras.push_back(new PutBox(x0,x1,y0,y1,z0,z1,r, g, b, a));
 
                 }
 
